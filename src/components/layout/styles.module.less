@@ -1,0 +1,41 @@
+@import '../../../config/variables.less';
+
+.layout {
+  &_wrapper {
+    background-color: @neutral-1;
+  }
+
+  &_content {
+    padding: 2.4rem;
+    width: 100%;
+    min-height: calc(100vh - 6rem);
+  }
+
+  &_form {
+    position: relative;
+    width: 100vw;
+    min-height: calc(100vh - 6rem);
+    background-color: @neutral-1;
+
+    &__content {
+      margin: 0 auto;
+      padding: 2.4rem;
+      width: 60%;
+    }
+  }
+}
+
+.container {
+  height: 100vh;
+  max-width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &_form {
+    width: 50rem;
+    padding: 2rem;
+    // box-shadow: 0 5px 24px 2px rgba(#000000, 0.2);
+  }
+}

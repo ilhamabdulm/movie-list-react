@@ -1,7 +1,7 @@
-import { SignInPage } from './pages';
+import AppRoutes from './routes';
 
 function App() {
-  return <SignInPage />;
+  return <AppRoutes />;
 }
 
 export default App;

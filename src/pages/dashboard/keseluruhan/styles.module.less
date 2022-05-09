@@ -1,0 +1,69 @@
+@import '../../../../config/variables.less';
+
+.layout {
+  &_header {
+    background-color: @neutral-1;
+    border-bottom: 1px solid @neutral-2;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 500;
+    height: 6rem;
+
+    &__menu {
+      width: 80%;
+      height: 100%;
+      border: none;
+    }
+
+    &__profile {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 2.4rem;
+      width: 20%;
+      padding: 0 2rem;
+
+      p {
+        font-size: 1.4rem;
+      }
+
+      div {
+        display: flex;
+        align-items: center;
+      }
+
+      svg {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+
+  &_wrapper {
+    background-color: @neutral-1;
+  }
+
+  &_sider {
+    height: calc(100vh - 6rem);
+    position: sticky;
+    top: 6rem;
+    left: 0;
+    border-right: 1px solid @neutral-2;
+
+    &__menu {
+      width: 100%;
+      border: none;
+      padding: 1.4rem;
+    }
+  }
+
+  &_content {
+    padding: 2.4rem;
+    width: 100%;
+    min-height: calc(100vh - 6rem);
+  }
+}
