@@ -1,21 +1,21 @@
+import { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import { FormLayout, MainLayout, AuthLayout } from '@/components/layout';
-import { DashboardKeseluruhanPage, SignInPage, MyProfilePage } from '@/pages';
+import routes from './config';
 
 const AppRoutes = () => {
   return (
-    <Routes>
-      <Route path="/" element={<MainLayout />}>
-        <Route path="dashboard" element={<DashboardKeseluruhanPage />} />
-      </Route>
-      <Route path="/form" element={<FormLayout />}>
-        <Route path="profile" element={<MyProfilePage />} />
-      </Route>
-      <Route path="/auth" element={<AuthLayout />}>
-        <Route path="signin" element={<SignInPage />} />
-      </Route>
-    </Routes>
+    <Suspense fallback={<div>Loading ...</div>}>
+      <Routes>
+        {routes.map((rt) => (
+          <Route path={rt.path} element={<rt.layout />}>
+            {rt.subroutes.map((srt) => (
+              <Route path={srt.path} element={<srt.element />} />
+            ))}
+          </Route>
+        ))}
+      </Routes>
+    </Suspense>
   );
 };
 
