@@ -10,11 +10,11 @@
     justify-content: space-between;
     position: sticky;
     top: 0;
-    z-index: 500;
+    z-index: 50;
     height: 6rem;
 
     &__menu {
-      width: 80%;
+      width: 60%;
       height: 100%;
       border: none;
     }
@@ -24,8 +24,9 @@
       align-items: center;
       justify-content: flex-end;
       gap: 2.4rem;
-      width: 20%;
+      width: auto;
       padding: 0 2rem;
+      height: 100%;
 
       p {
         font-size: 1.4rem;
@@ -34,11 +35,13 @@
       div {
         display: flex;
         align-items: center;
+        gap: 1.4rem;
+        cursor: pointer;
       }
 
       svg {
-        width: 2rem;
-        height: 2rem;
+        width: 2.4rem;
+        height: 2.4rem;
       }
     }
   }
@@ -56,4 +59,12 @@
       padding: 1.4rem;
     }
   }
+}
+
+.dropdown_menu {
+  margin-right: 2rem;
+  padding: 20rem 0;
+  width: 20rem;
+  // z-index: 60;
+  background-color: red;
 }

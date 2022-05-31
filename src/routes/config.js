@@ -24,7 +24,7 @@ const routes = [
   {
     name: 'form',
     layout: FormLayout,
-    path: '/',
+    path: '/form',
     subroutes: [
       {
         path: 'profile',
@@ -36,7 +36,7 @@ const routes = [
   {
     name: 'auth',
     layout: AuthLayout,
-    path: '/',
+    path: '/auth',
     subroutes: [
       {
         path: 'signin',
